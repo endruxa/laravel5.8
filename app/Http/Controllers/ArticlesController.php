@@ -115,6 +115,8 @@ class ArticlesController extends Controller
      */
     public function deleteArticle(Article $article)
     {
+        $article->delete();
 
+        return redirect()->route('articles');
     }
 }

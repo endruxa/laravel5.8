@@ -24,7 +24,11 @@
         </p>
     </div>
     <div class="btn-group" role="group">
-        <a class="btn btn-success" href="{{ route('editArticle', $article->id) }}" type="button">Edit<i class="far fa-edit"></i></a>
-        <a class="btn btn-danger" href="{{ route('deleteArticle', $article->id) }}" type="button">Delete<i class="far fa-trash-alt"></i></a>
+        <a class="btn btn-success" href="{{ route('editArticle', $article->id) }}" type="button"> Edit <i class="far fa-edit"></i></a>
+        <form action="{{ route('deleteArticle', $article) }}" method="POST">
+            {{ csrf_field()}}
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger"> Delete <i class="far fa-trash-alt"></i></button>
+        </form>
     </div>
 @endsection
