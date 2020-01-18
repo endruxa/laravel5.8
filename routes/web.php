@@ -15,11 +15,11 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-// Route::get('test', function() {
-//     $test = App\Models\Article::where('id', 3)->first();
-//     $fresh = $test->fresh();
-//     return dd($test, $fresh);
-// });
+Route::get('test', function() {
+    $test = App\User::find(2);
+    $a = $test->articles;
+    return dd($a);
+});
 
 
 Auth::routes();

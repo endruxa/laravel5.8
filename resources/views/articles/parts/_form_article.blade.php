@@ -15,9 +15,9 @@
 <div class="form-group col-md-6">
     <label for="categories">Categories</label>
     <select class="form-control" multiple name="categories[]" id="categories">
-        <option value="1">Tennis</option>
-        <option value="2">Paintball</option>
-        <option value="3">Yoga</option>
+        @foreach ($categories as $category)
+            <option value="{{$category->id}}">{{$category->title}}</option>
+        @endforeach
     </select>
 </div>
 
