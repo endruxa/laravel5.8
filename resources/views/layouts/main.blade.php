@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body class="pt-0">
   <!-- Navigation -->
   @include('layouts._navbar')
 

@@ -44,3 +44,5 @@ Route::group(['prefix'=> 'articles'],function() {
     Route::put('/{article}/update', 'ArticlesController@update')->name('update');
     Route::delete('{article}/delete', 'ArticlesController@deleteArticle')->name('deleteArticle');
 });
+
+Route::resource('category','CategoryController');
