@@ -6,6 +6,11 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap.scss';
+@import '@fortawesome/fontawesome-free';
 
 //main
 @import 'main/main.scss';
+@import 'main/mainHead.scss';
+@import 'main/blog.scss';
+@import 'main/_main-image.scss';
+@import 'main/_posts-image.scss';
