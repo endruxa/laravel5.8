@@ -84,8 +84,9 @@ class ArticlesController extends Controller
     public function editArticle($id)
     {
         $article = Article::find($id);
+        $categories = Category::all();
 
-        return view('articles.edit_article', compact('article'));
+        return view('articles.edit_article', compact('article', 'categories'));
     }
 
     /**
@@ -100,6 +101,7 @@ class ArticlesController extends Controller
         try{
             \DB::beginTransaction();
                 $article->update($request->all());
+                $article->categories()->sync($request->categories);
             \DB::commit();
         }catch(\Exception $e){
             \DB::rollBack();
