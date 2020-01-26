@@ -15,21 +15,17 @@
 <div class="form-group col-md-6">
     <label for="categories">Categories</label>
     <select class="form-control" multiple name="categories[]" id="categories">
-        @if(isset($article))
-            @if(!is_null($article->categories))
-                @foreach ($article->categories as $category)
-                    <option value="{{$category->id}}">{{$category->title}}</option>
+        @foreach ($categories as $category)
+            <option value="{{$category->id}}"
+            @isset($article->id))
+                @foreach($article->categories as $articleCategory)
+                    @if($category->id == $articleCategory->id) 
+                        selected="selected"
+                    @endif
                 @endforeach
-            @else
-                @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{$category->title}}</option>
-                @endforeach
-            @endif
-        @else
-            @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->title}}</option>
-            @endforeach
-        @endif
+            @endisset
+            >{{$category->title}}</option>
+        @endforeach
     </select>
 </div>
 

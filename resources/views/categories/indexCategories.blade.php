@@ -20,7 +20,7 @@
   @foreach($categories as $category)
   <div class="card text-center" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-text">{{ $category->title }}</h5>
+        <h5 class="card-text"><a href="{{route('category.show', $category)}}">{{ $category->title }}</a></h5>
     </div>
     <div class="card-footer">
         <div class="row justify-content-center">

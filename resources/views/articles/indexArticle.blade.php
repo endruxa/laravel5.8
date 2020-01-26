@@ -23,6 +23,12 @@
             <span>{{ $article->created_at->format('Y m d') }}</span>
         </p>
     </div>
+    <div class="tag-list">
+        @foreach($article->categories as $category)
+            <a href="{{ route('category.show', $category) }}"><span class="badge badge-pill badge-info">{{$category->title}}</span></a>
+        @endforeach
+    </div>
+    <br>
     <div class="btn-group" role="group">
         <a class="btn btn-success" href="{{ route('editArticle', $article->id) }}" type="button"> Edit <i class="far fa-edit"></i></a>
         <form action="{{ route('deleteArticle', $article) }}" method="POST">

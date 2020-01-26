@@ -64,6 +64,7 @@ class ArticlesController extends Controller
                 $article['title'] = $request->title;
                 $article['description'] = $request->description;
                 $article->save();
+                $article->categories()->sync($request->categories);
             \DB::commit();
         }catch(\Exception $e) {
             \DB::rollBack();
