@@ -12,12 +12,6 @@
 
             <hr>
 
-            <div class="col-md-6">
-                <input type="file" name="image">
-            </div>
-
-            <hr>
-
             <button type="submit" class="btn btn-primary">Update</button>
 
         </form>

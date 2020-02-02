@@ -29,4 +29,10 @@
     </select>
 </div>
 
+<hr>
+
+<div class="col-md-6">
+    <input type="file" name="image">
+</div>
+
 <input type="hidden" name="user_id" value="">
