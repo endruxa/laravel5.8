@@ -30,11 +30,11 @@
     <div class="card-footer">
       @auth
           <div class="row justify-content-center">
-            <a class="btn btn-success" href="{{ route('category.edit', $category) }}" type="button"> Edit <i class="far fa-edit"></i></a>
+            <a class="btn btn-success" href="{{ route('category.edit', $category) }}" type="button"> Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
             <form action="{{ route('category.destroy', $category) }}" method="POST">
               {{ csrf_field()}}
               @method('DELETE')
-              <button type="submit" class="btn btn-danger"> Delete <i class="far fa-trash-alt"></i></button>
+              <button type="submit" class="btn btn-danger"> Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
             </form>
           </div>
         @endauth

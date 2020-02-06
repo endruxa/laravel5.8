@@ -5,8 +5,8 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
-@import '@fortawesome/fontawesome-free';
+@import "~bootstrap/dist/css/bootstrap";
+@import "~font-awesome/scss/font-awesome";
 
 //main
 @import 'main/main.scss';
