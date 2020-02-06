@@ -17,10 +17,15 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="canonical" href="https://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/">
   <link rel="alternate" type="application/rss+xml" title="Clean Blog" href="/startbootstrap-clean-blog-jekyll/feed.xml">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
 
 </head>
 
 <body class="pt-0">
+  <!-- SweetAlert -->
+  @include('sweetalert::alert')
+
   <!-- Navigation -->
   @include('layouts._navbar')
 

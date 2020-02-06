@@ -58,4 +58,14 @@ class User extends Authenticatable
         return $this->hasMany(Category::class);
     }
 
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function getFullNameAttribute()
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
+
 }

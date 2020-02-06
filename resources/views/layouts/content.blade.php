@@ -29,7 +29,7 @@
 
       <!-- Pager -->
       <div class="clearfix">
-        <a class="btn btn-primary float-right" href="/startbootstrap-clean-blog-jekyll/posts">View All Posts &rarr;</a>
+        <a class="btn btn-primary float-right" href="{{ route('articles') }}">View All Posts &rarr;</a>
       </div>
 
     </div>

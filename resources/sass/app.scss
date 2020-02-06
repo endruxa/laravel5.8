@@ -5,7 +5,7 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/bootstrap';
 @import '@fortawesome/fontawesome-free';
 
 //main
@@ -14,3 +14,4 @@
 @import 'main/blog.scss';
 @import 'main/_main-image.scss';
 @import 'main/_posts-image.scss';
+@import 'main/_categories-image.scss';
