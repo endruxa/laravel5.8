@@ -169,6 +169,9 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
+        SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+
         /*
          * Application Service Providers...
          */

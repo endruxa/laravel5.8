@@ -18,17 +18,32 @@
             <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/contact">Contact</a>
           </li>
         </ul>
-          @if (Route::has('login'))
-              @auth
-              <div class="top-right links"> 
-                  <a href="{{ url('/main') }}" class="nav-link">Main</a>
-                @else
-                    <a href="{{ route('login') }}" class="nav-link">Login</a>
-                    @if (Route::has('register'))
-                      <a href="{{ route('register') }}" class="nav-link">Register</a>
-                    @endif
-              </div>
-              @endauth
-           @endif
+        <ul class="nav navbar-nav navbar-right">
+              <!-- Authentication Links -->
+              @guest
+                  <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                  @else
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                              {{ Auth::user()->name }} <span class="caret"></span>
+                          </a>
+
+                          <ul class="dropdown-menu">
+                              <li>
+                                  <a class="nav-link" href="{{ route('logout') }}"
+                                      onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                      Logout
+                                  </a>
+
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                      {{ csrf_field() }}
+                                  </form>
+                              </li>
+                          </ul>
+                      </li>
+              @endguest
+          </ul>
       </div>
   </nav>

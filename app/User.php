@@ -11,6 +11,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+const ROLE_ADMIN = 1;
+const ROLE_USER = 2;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -66,6 +69,14 @@ class User extends Authenticatable
     public function getFullNameAttribute()
     {
         return "{$this->first_name} {$this->last_name}";
+    }
+
+    /**
+     * Check is admin
+     */
+    public function isAdmin()
+    {
+        return $this->role === User::ROLE_ADMIN;
     }
 
 }
